@@ -17,12 +17,17 @@ sckey = ''
 
 ftqq_url = "https://sc.ftqq.com/%s.send"%(sckey)
 url1 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=hierarchical_task_system&cmd=2'
+#签到请求1
 url2 = 'https://v.qq.com/x/bu/mobile_checkin'
+#签到请求2
 url3 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=7&_=1582364733058&callback=Zepto1582364712694'
+#下载请求3
 url4 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=6&_=1582366326994&callback=Zepto1582366310545'
-url5 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=hierarchical_task_system&cmd=2&_=1555060502385&callback=Zepto1555060502385'
+#赠送请求4
 url6 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=3&_=1582368319252&callback=Zepto1582368297765'
+#弹幕请求5
 url7 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=3&_=1582368319252&callback=Zepto1582368297765'
+#观看请求6
 
 login_headers = {
     'Referer': 'https://v.qq.com',
@@ -90,13 +95,6 @@ def start():
     print 'Sign6 Success'
     status = status + "\n\n 链接6 成功"
 
-    sign7 = requests.get(url7,headers=sign_headers).text
-  if 'Unauthorized' in sign7:
-    print 'Sign7 error,Cookie Invalid'
-    status = status + "\n\n 链接7 失败，Cookie失效"
-  else:
-    print 'Sign7 Success'
-    status = status + "\n\n 链接7 成功"
 
   payload = {'text': '腾讯视频V力值签到通知', 'desp': status}
   requests.post(ftqq_url, params=payload)
