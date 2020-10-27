@@ -1,11 +1,6 @@
 # coding: utf-8
-'''
-@author: sy-records
-@license: https://github.com/sy-records/v-checkin/blob/master/LICENSE
-@contact: 52o@qq52o.cn
-@desc: 腾讯视频好莱坞会员V力值签到，支持两次签到：一次正常签到，一次手机签到。
-@blog: https://qq52o.me
-'''
+
+#腾讯视频好莱坞会员V力值签到、自动领取任务V力值(已完成的任务)
 
 import sys
 reload(sys)
