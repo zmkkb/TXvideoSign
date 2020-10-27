@@ -1,6 +1,6 @@
 # coding: utf-8
 
-#腾讯视频好莱坞会员V力值签到、自动领取任务V力值(已完成的任务)
+#腾讯视频双签到、自动领取已完成任务成长值
 
 import sys
 reload(sys)
@@ -19,9 +19,9 @@ url3 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&t
 #下载请求3
 url4 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=6&_=1582366326994&callback=Zepto1582366310545'
 #赠送请求4
-url6 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=3&_=1582368319252&callback=Zepto1582368297765'
+url5 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=3&_=1582368319252&callback=Zepto1582368297765'
 #弹幕请求5
-url7 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=3&_=1582368319252&callback=Zepto1582368297765'
+url6 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_MissionFaHuo&cmd=4&task_id=3&_=1582368319252&callback=Zepto1582368297765'
 #观看请求6
 
 login_headers = {
@@ -89,7 +89,6 @@ def start():
   else:
     print 'Sign6 Success'
     status = status + "\n\n 链接6 成功"
-
 
   payload = {'text': '腾讯视频V力值签到通知', 'desp': status}
   requests.post(ftqq_url, params=payload)
